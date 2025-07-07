@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const productsFilePath = path.join(__dirname, '../products.json');
+const productsFilePath = path.join(__dirname, 'products.json');
 
 // نقطة نهاية API لجلب المنتجات فقط (بدون حسابات الذهب حالياً)
 app.get('/products', async (req, res) => {
