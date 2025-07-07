@@ -14,7 +14,8 @@ app.use(express.json()); // للسماح بتحليل طلبات JSON (إذا ا
 
 // مسار لملف products.json
 //const productsFilePath = path.join(process.cwd(), 'products.json');
-const productsFilePath = path.join(process.cwd(), 'products.json');
+//const productsFilePath = path.join(process.cwd(), 'products.json');
+const productsFilePath = path.join(__dirname, '../products.json');
 
 // مفتاح API لسعر الذهب
 const EXCHANGE_RATE_API_KEY = process.env.EXCHANGE_RATE_API_KEY;
