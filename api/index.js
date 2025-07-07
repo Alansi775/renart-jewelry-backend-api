@@ -7,12 +7,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// مسار لملف products.json (المفترض أنه بجانب index.js الآن في مجلد api)
 const productsFilePath = path.join(__dirname, 'products.json');
 
-// نقطة نهاية API لجلب المنتجات فقط (بدون حسابات الذهب حالياً)
+// نقطة نهاية API لجلب المنتجات فقط
 app.get('/products', async (req, res) => {
     try {
-        // قراءة المنتجات من ملف JSON
         const data = await fs.readFile(productsFilePath, 'utf8');
         let products = JSON.parse(data);
         res.json(products); // إرسال المنتجات مباشرة
