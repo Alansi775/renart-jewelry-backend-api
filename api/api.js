@@ -44,7 +44,8 @@ async function getGoldPrice() {
 }
 
 // نقطة نهاية API لجلب المنتجات مع الأسعار المحسوبة
-app.get('/api/products', async (req, res) => {
+//app.get('/api/products', async (req, res) => {
+app.get('/products', async (req, res) => {
     try {
         // قراءة المنتجات من ملف JSON
         const data = await fs.readFile(productsFilePath, 'utf8');
